@@ -2,19 +2,18 @@ em {
     color: #1D263B;
 }
 
-.projects {
+.papers {
     padding-top: 100px;
-    max-width: 1000px;
+    max-width: 1200px;
 }
 
-.project-cards-container {
+.paper-cards-container {
     margin-top: 50px;
-    height: fit-content;
+   /* height: fit-content;*/
     height: -moz-fit-content;
-
 }
 
-.card {
+.pcard {
     display: inline-flex;
     flex-direction: column;
     color: #1D263B;
@@ -26,7 +25,7 @@ em {
 
 .card-preview-img {
     max-width: 100%;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 10px 10px;
     padding: 5px;
     background-color: white;
 }
@@ -34,7 +33,7 @@ em {
 .card-info {
     padding: 25px;
     background-color: #FFFFFF;
-    border-radius:0 0 10px 10px;
+    border-radius: 10px 10px 10px 10px;
 }
 
 .has-no-preview .card-info {
@@ -48,62 +47,62 @@ em {
     margin-bottom: 10px;
 }
 
-.project-title {
+.paper-title {
     font-size: 1.2em;
     font-weight: 700;
     letter-spacing: 0.05em;
     color: #1D263B;
 }
 
-.project-links {
+.paper-links {
     display: flex;
     flex-wrap: nowrap;
 }
 
-.project-links a i {
+.paper-links a i {
     padding: 5px;
 }
 
-.project-links a i {
+.paper-links a i {
     color: #F08CAE;
     font-size: 1.2em;
     transition: all 0.2s ease;
 }
 
-.project-links a i:hover {
+.paper-links a i:hover {
     font-size: 1.25em;
     padding: 2px 5px;
     color: #7EB77F;
 }
 
-.project-links a:last-child {
+.paper-links a:last-child {
     margin-left: 5px;
 }
 
-.project-skills {
+.paper-skills {
     margin-bottom: 12px;
     padding-bottom: 12px;
     border-bottom: 1px solid #7EB77F;
 }
 
-.project-skills span {
+.paper-skills span {
     color: #0FA3B1;
     font-weight: 700;
     font-size: 0.9em;
     letter-spacing: 0.05em;
 }
 
-.project-skills span:not(:last-child) {
+.paper-skills span:not(:last-child) {
     margin-right: 10px;
 }
 
-.project-description {
+.paper-description {
     color: #1D263B;
 }
 
 @media only screen and (min-width: 768px) {
-    .project-cards-container {
-        column-count: 2;
+    .paper-cards-container {
+        column-count: 1;
         column-gap: 2em;
     }
 }
