@@ -51,6 +51,7 @@
         <link rel="stylesheet" href="./css/main.css" type="text/css">
         <link rel="stylesheet" href="./css/header.css" type="text/css">
         <link rel="stylesheet" href="./css/projects.css" type="text/css">
+        <link rel="stylesheet" href="./css/imgtext.css" type="text/css">
         <link rel="stylesheet" href="./css/papers.css" type="text/css">
         <link rel="stylesheet" href="./css/footer.css" type="text/css">
 
@@ -80,10 +81,29 @@
                 </div>
                 
                 <p class="section-description">
-                My research primarily involves high redshift quasars and their local environments.  <br>  <br>
-                I am currently using data from the Large Binocular Telescope (LBT) and the Canada-France-Hawaii Telescope (CFHT) to search for a large scale overdensity of galaxies around the z=6.3 quasar J010013.02+280225.8 as it is the most massive high-redshift quasar known and likely resides in a massive hark matter halo. 
+                <b>My research primarily involves high redshift quasars and the galaxies within their local environments.</b>  <br>  <br>
+                <div class="timgcontainer">
+                    <img src="./img/jwst.png" alt="JWST Mirror">
+                    <p>
+                I work on the <a class="hyperlink" href="https://aspire-quasar.github.io/">ASPIRE</a> team and have been using JWST data from <a class="hyperlink" href="https://www.stsci.edu/jwst/science-execution/program-information?id=1764">GO #1764</a> to search for galaxies in the environments of the three <span class="pink">highest</span> redshift quasars known to date.  <br><br>
+
+                I am the <span class="pink">PI</span> of the Cycle 3 JWST proposal <a class="hyperlink" href="https://www.stsci.edu/jwst/science-execution/program-information?id=5221">GO #5221</a>.  With this data, I will have a NIRCam/WFSS mosaic of the J0313 field which I will use to search for [OIII] emitters in the neighborhood of the quasar.
+                    </p>
+                </div>
                 <br> <br>
-                I work on the <a class="hyperlink" href="https://aspire-quasar.github.io/">ASPIRE</a> team and will soon be using JWST data to understand galaxy clustering through cosmic time. 
+
+                <div class="timgcontainer">
+                    <img src="./img/lbt.png" alt="LBT Mirror">
+                    <p>
+                        My first project involved using data from the Large Binocular Telescope (LBT) and the Canada-France-Hawaii Telescope (CFHT) to search for a large scale overdensity of galaxies around the z=6.3 quasar J010013.02+280225.8. 
+                        <br> <br>
+                        As a follow-up to this project, I am also the <span class="pink">PI</span> of an MMT proposal in which I will recieve Binospec multi-object spectroscopy of the galaxies selected in my first project to confirm their redshifts and memberships within the protocluster around J0100.
+                    </p>
+                    <img src="./img/mmt.png" alt="MMT mirror">
+                </div>
+            
+            
+                
                 </p>
                     
                     <!-- For quasars at z <span>&#8805;</span> 6 to be powered by such massive black holes, many cosmological simulations indicate that they must have formed in the most massive dark matter halos.  This quasar is the most massive quasar known at z <span>&#8805;</span> 6, suggesting a high likelihood of residing in a massive dark matter halo and therefore, hosting a galaxy overdensity in the region. -->
@@ -91,6 +111,67 @@
                 
                 
                 <div class="project-cards-container">
+                    <div class="card">
+                        <img src="./img/research-preview/3fields_bold.png"
+                            alt="Project Preview Screenshot" class="card-preview-img">
+                        <div class="card-info">
+                            <div class="title-and-links">
+                                <span class="project-title">
+                                    Diversity of Mpc-Scale Quasar Environments at the Highest Redshifts
+                                </span>
+                                <div class="project-links">
+                                   <!-- <a href="https://nunflix-6e5b3.web.app/">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>-->
+                                   
+                                </div>
+                            </div>
+                            <div class="project-skills">
+                                <span>Python</span>
+                                <span>GALSIM</span>
+                                <span>Corrfunc</span>
+                                <span>BAGPIPES</span>
+                                <span>JWST</span>
+                            </div>
+                            <p class="project-description">
+                                I analyzed the environments of the three highest redshift quasars to date using JWST/NIRCam + (sparse) JWST/MIRI photometry which provides extremely deep imaging around the quasars in the F090W, F115W, F250W, F360W, F430W, and F560W filters which we use to select for LBGs (F090W-dropouts) and [OIII]-emitters (F430M excesses).  The range in both overdensity and clustering signals is stark between the three fields despite being around quasars with similar properties and redshifts. 
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <img src="./img/research-preview/maskimage_mask_1_iter_5.png"
+                            alt="Project Preview Screenshot" class="card-preview-img">
+                        <div class="card-info">
+                            <div class="title-and-links">
+                                <span class="project-title">
+                                    Spectroscopic Followup of LBGs in the J0100 Field
+                                </span>
+                                <div class="project-links">
+                                   <!-- <a href="https://nunflix-6e5b3.web.app/">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>-->
+                                   
+                                </div>
+                            </div>
+                            <div class="project-skills">
+                                <span>PyPelt</span>
+                                <span>Corrfunc</span>
+                                <span>Prospector</span>
+                                <span>MMT/Binospec</span>
+                            </div>
+                            <p class="project-description">
+                                The membership of the 31 color-selected galaxies in the J0100 field is unconfirmed due to the coarse (∆z ∼ 0.8) constraining
+                                power of color selection. We will use deep rest-UV/optical multi-slit spectrsocopy with
+                                MMT/Binospec in order to: 1) determine if the candidate LBGs are members of the overdensity providing information about color-selection effectiveness, 
+                                2) calculate the 3-dimensional spatial clustering of the galaxies allowing us to calculate DMH masses of
+                                the quasar and the galaxies, and 3) compare the spectroscopic UV characteristics of
+                                galaxies in overdense regions to those in typical or underdense regions.                            </p>
+                        </div>
+                    </div>
+
+
                     <div class="card">
                         <img src="./img/research-preview/overdensity.png"
                             alt="Project Preview Screenshot" class="card-preview-img">
@@ -111,10 +192,38 @@
                                 <span>Astropy</span>
                                 <span>Corrfunc</span>
                                 <span>EAZY</span>
+                                <span>LBT&CFHT</span>
                             </div>
                             <p class="project-description">
-                              I have built the Python architecture needed to select for Lyman Break galaxies, filter out low-redshift interlopers and non-astronomical sources, and calculate the photometric redshifts with EAZY given their photometric information along with calculating the angular autocorrelation function of the galaxies. 
+                              I have built the Python architecture needed to select for Lyman Break galaxies, filter out low-redshift interlopers and non-astronomical sources, calculate the photometric redshifts with EAZY/LePhare given their photometric information, and calculate the angular autocorrelation function of the galaxies.  This resulted in a color selection and subsequent analysis of 31 target LBG candidates in the quasar field. 
                             </p>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <img src="./img/research-preview/wfss_ex.png"
+                            alt="Project Preview Screenshot" class="card-preview-img">
+                        <div class="card-info">
+                            <div class="title-and-links">
+                                <span class="project-title">
+                                    Larger Scale Blind Followup of LBG-Selected Overdensities around J0313
+                                </span>
+                                <div class="project-links">
+                                   <!-- <a href="https://nunflix-6e5b3.web.app/">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>-->
+                                   
+                                </div>
+                            </div>
+                            <div class="project-skills">
+                                <span>Python</span>
+                                <span>JWST Pipeline</span>
+                                <span>Corrfunc</span>
+                                <span>JWST/WFSS</span>
+                            </div>
+                            <p class="project-description">
+                                The J0313 field has shown an intriguing lack of galaxies at the exact quasar redshift based on color selection and SED fitting. However, it does show possible fore- and back-ground overdensities with coarse redshift determinations.  We will use a NIRCam/WFSS mosaic to simultaneously search for [OIII]-emitters in the field of the quasar (a different population of galaxies from LBGs) as well as confirm the spectroscopic redshifts of the LBGs selected in the previous study.  I will use these measurements to study the kinematics of the overdensities, the dark matter halo mass of the quasar, and the galaxy properties in and out of overdensities.                        </p>
                         </div>
                     </div>
                     
@@ -141,33 +250,6 @@
                             <p class="project-description">
                               For my undergraduate thesis, I analyzed spectroscopic rotation rates of field stars and low-mass stars in the Alpha Persei open cluster to
 extract information about stellar ages from spectroscopic measures alone.
-                            </p>
-                        </div>
-                    </div>
-                                        
-                    <div class="card">
-                        <img src="./img/research-preview/costa14.jpg"
-                            alt="Project Preview Screenshot" class="card-preview-img">
-                        <div class="card-info">
-                            <div class="title-and-links">
-                                <span class="project-title">
-                                    Clustering Through Cosmic Time
-                                </span>
-                                <div class="project-links">
-                                    <!--<a href="https://musicplayer.anniew.xyz/">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                    <a href="https://github.com/anniedotexe/music-player">
-                                        <i class="fa-brands fa-github"></i>
-                                    </a>-->
-                                </div>
-                            </div>
-                            <div class="project-skills">
-                                <span>Python</span>
-                                <span>JWST</span>
-                            </div>
-                            <p class="project-description">
-                                I will use data from two JWST surveys, <a class="hyperlink" href="https://aspire-quasar.github.io/">ASPIRE</a> and <a class="hyperlink" href="https://jwst-fresco.astro.unige.ch/">FRESCO</a>, to calculate the clustering of [OIII]+H<span style="color:black">&beta;</span> emitters on small scales for redshifts z~6.5-9. (Image from <a class="hyperlink" href="https://academic.oup.com/mnras/article/439/2/2146/1020300?login=true">Costa et al. 2014</a>)
                             </p>
                         </div>
                     </div>

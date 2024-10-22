@@ -1,0 +1,15 @@
+.timgcontainer {
+    display: flex;              /* Enables Flexbox */
+    align-items: center;         /* Aligns items vertically center */
+}
+
+.timgcontainer img {
+    width: 15%;
+    height: 100%;
+    margin-right: 20px;
+}
+
+.timgcontainer p {
+    flex: 1;   
+    line-height: 1.5;                  /* Allows text to take up remaining space */
+}
