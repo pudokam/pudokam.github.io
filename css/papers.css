@@ -4,12 +4,12 @@ em {
 
 .papers {
     padding-top: 100px;
-    max-width: 1200px;
+    max-width: 1000px;
 }
 
 .paper-cards-container {
     margin-top: 50px;
-   /* height: fit-content;*/
+   height: fit-content;
     height: -moz-fit-content;
 }
 
