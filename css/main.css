@@ -113,6 +113,20 @@ section .hyperlink:hover {
     margin-right: 20px;
 }
 
+.page-title-about {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-title-about img {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+}
+
+
 @media only screen and (min-width: 768px) {
     h2 {
         font-size: 2.5em;
