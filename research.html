@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<!--
+	RESEARCH.HTML - RESEARCH PAGE
+	Astral by HTML5 UP - Modified
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	
+	This page displays your research projects in a card grid layout, with images and descriptions.
+	Each card can showcase a different research project.
+-->
+<html>
+	<head>
+		<!-- Page title shown in browser tab -->
+		<title>Research</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+        <!-- app or web page icon -->
+        <link rel="icon" type="image/png" href="assets/images/maria icon 16px.png" />
+        <link rel="apple-touch-icon" href="assets/images/maria icon 16px.png" />
+
+	</head>
+	<body class="is-preload">
+
+		<div id="wrapper">
+
+			<!-- Top navigation header -->
+			<header id="header">
+				<!-- Navigation menu - 'active' class shows current page -->
+				<nav id="nav-top">
+						<a href="index.html" class="nav-link">Home</a>
+						<a href="about.html" class="nav-link">About Me</a>
+						<a href="research.html" class="nav-link">Research</a>
+						<a href="resume.html" class="nav-link">Resume</a>
+						<a href="publications.html" class="nav-link">Publications</a>
+						<a href="outreach.html" class="nav-link">Outreach</a>
+					</nav>
+			</header>
+
+			<!-- Main content container -->
+			<div id="main">
+
+				<!-- Research Section -->
+				<!-- UPDATE: Customize each research card with your projects, titles, descriptions, and images -->
+				<article class="panel">
+								<header>
+									<h2>Research</h2>
+								</header>
+								<!-- UPDATE THIS: Add your research introduction -->
+								<p>
+                                    My research focuses on understanding how the first galaxies and supermassive black holes formed in the early Universe and has recently taken a shift toward <b>machine learning development</b> to search for these galaxies in noisy data sets. 
+                                    
+                                    Quasars are extremely bright sources powered by supermassive black holes at the center of galaxies.  They are particularly thought to be signposts of some of the first large scale structures in the Universe because they host extraordinarily massive black holes. How these black holes formed to be a billion times more massive than the Sun less than a few million years after the Big Bang (a relatively short time in cosmic history) remains one of the most pressing open questions in astrophysics. My current work uses the galaxies surrounding these quasars to uncover the underlying dark matter distribution of the universe and how this and the quasar environment plays a role in driving this rapid growth.
+				
+                                </p>
+								<!-- Grid of research project cards (responsive layout) -->
+								<div class="research-cards">
+
+                                    <!-- Research Project Card 1 -->
+									<!-- UPDATE: Replace title, description, and image (pic01.jpg) with your project details -->
+                                    <div class="research-card">
+                                        <div class="card-image">
+                                            <a class="card-link" href="image-viewer.html?img=assets/images/oiiidetection.png&title=A%20Faster%20R-CNN%20Pipeline%20For%20[OIII]%20Detection%20in%20JWST/WFSS%20Data">
+                                                <img src="assets/images/oiiidetection.png" alt="A Faster R-CNN Pipeline for [OIII] Detection in JWST/WFSS Data" />
+                                             </a>   
+                                        </div>
+                                        <div class="card-content">
+                                            <h3>A Faster R-CNN Pipeline for [OIII] Detection in JWST/WFSS Data</h3>
+                                            <p>I have developed a Faster R-CNN object detection pipeline with a modified ResNet50-FPN backbone to autonomously identify [OIII] emission line doublets in JWST/NIRCam Wide Field Slitless Spectroscopy (WFSS) data. The pipeline operates on 128×128 pixel cutouts of grism dispersed images, using a custom weighted coverage metric and synthetic training data injected into real JWST backgrounds to handle the low source density of high-redshift emitters. This approach significantly reduces the manual overhead of traditional extraction pipelines, enabling systematic detection of [OIII] emitters at z ~ 6–8.</p>
+                                        </div>
+                                    </div>
+
+									<!-- Research Project Card 2 -->
+									<!-- UPDATE: Replace title, description, and image (pic01.jpg) with your project details -->
+                                    <div class="research-card">
+                                        <div class="card-image">
+                                            <a class="card-link" href="image-viewer.html?img=assets/images/3fields_bold.png&title=Diversity%20of%20Mpc-Scale%20Quasar%20Environments%20at%20the%20Highest%20Redshifts">
+                                                <img src="assets/images/3fields_bold.png" alt="Diversity of Mpc-Scale Quasar Environments at the Highest Redshifts" />
+                                             </a>   
+                                        </div>
+                                        <div class="card-content">
+                                            <h3>Diversity of Mpc-Scale Quasar Environments at the Highest Redshifts</h3>
+                                            <p>I analyzed the environments of the three highest redshift quasars to date using JWST/NIRCam + (sparse) JWST/MIRI photometry which provides extremely deep imaging around the quasars in the F090W, F115W, F250W, F360W, F430W, and F560W filters. I used this photometry to select LBGs (F090W-dropouts) and [OIII]-emitters (F430M excesses) along with determining photometric redshifts with both BAGPIPES and Eazy. The difference in overdensity and clustering signals is stark between the three fields despite being around quasars with similar properties and redshifts.</p>
+                                        </div>
+                                    </div>
+								
+									<!-- Research Project Card 3 -->
+                                    <div class="research-card">
+                                        <div class="card-image">
+                                            <a class="card-link" href="image-viewer.html?img=assets/images/maskimage_mask_1_iter_5.png&title=Spectroscopic%20Followup%20of%20LBGs%20in%20the%20J0100%20Field">
+                                                <img src="assets/images/maskimage_mask_1_iter_5.png" alt="Spectroscopic Followup of LBGs in the J0100 Field" />
+                                            </a>
+                                        </div>
+                                        <div class="card-content">
+                                            <h3>Spectroscopic Followup of LBGs in the J0100 Field</h3>
+                                            <p>The membership of the 31 color-selected galaxies in the J0100 field from my previous work is unconfirmed due to the coarse (∆z ∼ 0.8) constraining power of photometric color selection. We have obtained deep rest-UV/optical multi-slit spectrsocopy with MMT/Binospec that allows us to to: 1) determine if the candidate LBGs are members of the overdensity providing information about color-selection effectiveness, 2) calculate the 3-dimensional spatial clustering of the galaxies allowing us to calculate DMH masses of the quasar and the galaxies, and 3) compare the spectroscopic UV characteristics of galaxies in overdense regions to those in typical or underdense regions.</p>
+                                        </div>
+                                    </div>
+									<!-- Research Project Card 4 -->
+                                    <div class="research-card">
+                                        <div class="card-image">
+                                            <a class="card-link" href="image-viewer.html?img=assets/images/overdensity.png&title=Large%20Scale%20Overdensity%20of%20Lyman%20Break%20Galaxies%20Around%20z%3D6.3%20Quasar%20J0100%2B2802">
+                                                <img src="assets/images/overdensity.png" alt="Large Scale Overdensity of Lyman Break Galaxies Around z=6.3 Quasar J0100+2802" />
+                                            </a>
+                                        </div>
+                                        <div class="card-content">
+                                            <h3>Large Scale Overdensity of Lyman Break Galaxies Around z=6.3 Quasar J0100+2802</h3>
+                                            <p>I have developed the Python architecture needed to select for Lyman Break galaxies, calculate the colors of redshifted synthetic galaxy spectra, filter out low-redshift interlopers and non-astronomical sources, calculate the photometric redshifts with EAZY/LePhare given their photometric information, and calculate the angular autocorrelation function of the galaxies. This resulted in a color selection and subsequent analysis of 31 target LBG candidates in the quasar field showing a highly overdense region around the highest mass high-redshift quasar.</p>
+                                        </div>
+                                    </div>
+									<!-- Research Project Card 5 -->
+                                    <div class="research-card">
+                                        <div class="card-image">
+                                            <a class="card-link" href="image-viewer.html?img=assets/images/vsini.png&title=Stellar%20Angular%20Momentum%20Evolution">
+                                                <img src="assets/images/vsini.png" alt="Stellar Angular Momentum Evolution" />
+                                            </a>
+                                        </div>
+                                        <div class="card-content">
+                                            <h3>Stellar Angular Momentum Evolution</h3>
+                                            <p>For my undergraduate thesis, I analyzed spectroscopic rotation rates of field stars and low-mass stars in the Alpha Persei open cluster to extract information about stellar ages from spectroscopic measures alone. We developed a probabilistic Bayesian framework to assign age upper limits to stars based on rotational periods and chemical abundances.</p>
+                                        </div>
+                                    </div>
+								</div>
+							</article>
+
+					</div>
+
+			<!-- Footer with contact info and external links -->
+			<div id="footer">
+				<div class="footer-links">
+					<a href="https://www.linkedin.com/in/maria-pudoka" target="_blank" rel="noopener"> <i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+					<a href="https://orcid.org/0000-0003-4924-5941" target="_blank" rel="noopener"> <i class="fa-brands fa-orcid"></i> ORCID</a>
+					<a href="https://github.com/pudokam" target="_blank" rel="noopener"> <i class="fa-brands fa-github"></i> GitHub</a>
+					<a href="mailto:pudokam17@gmail.com"> <i class="fa-solid fa-envelope"></i> Email</a>
+				</div>
+				<div class="footer-contact">
+					<p>Email: <a href="mailto:pudokam17@gmail.com">pudokam17@gmail.com</a></p>
+					<p>933 N Cherry Ave, Tucson, AZ 85719</p>
+				</div>
+			</div>
+
+		<!-- JavaScript Files Loaded in Order -->
+		<!-- jQuery: Used for utility functions and DOM manipulation -->
+			<script src="assets/js/jquery.min.js"></script>
+		<!-- Browser detection and compatibility fixes -->
+			<script src="assets/js/browser.min.js"></script>
+		<!-- Responsive breakpoints handler -->
+			<script src="assets/js/breakpoints.min.js"></script>
+		<!-- Utility functions from template -->
+			<script src="assets/js/util.js"></script>
+		<!-- Main template JavaScript (original functionality) -->                <script src="assets/js/main.js"></script>
+			<script src="assets/js/custom.js"></script>
+        </body>
+</html>
