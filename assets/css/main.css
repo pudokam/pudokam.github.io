@@ -2374,6 +2374,7 @@ a:active {
 		background: #1a1a1a;
 		position: fixed;
 		top: calc(60px + env(safe-area-inset-top));
+		bottom: 0;
 		left: 0;
 		right: 0;
 		width: 100vw;
@@ -2382,8 +2383,10 @@ a:active {
 		z-index: 1001;
 		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 		box-sizing: border-box;
-		max-height: calc(100vh - 60px);
+		height: auto;
+		max-height: calc(100vh - (60px + env(safe-area-inset-top)));
 		overflow-y: auto;
+		padding-bottom: env(safe-area-inset-bottom);
 	}
 
 	#nav-top.open {
