@@ -2668,3 +2668,26 @@ a:active {
     margin-top: 30px;
 	
 }
+img{
+    border-style:ridge;
+    border-color:orangered;
+}
+
+#ms210 {
+    width: 35%;
+    float: right;
+    margin-left: 2vw;
+	margin-right:1vw;
+    margin-bottom: 2vw;
+    border-radius: 10px;
+    display: block;
+}
+
+@media screen and (max-width: 400px) {
+    #ms210 {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+        margin-bottom: 4vw;
+    }
+}
