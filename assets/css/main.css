@@ -2683,6 +2683,11 @@ img{
     border-radius: 10px;
     display: block;
 }
+#ms210 img,
+img#ms210 {
+    width: 35% !important;
+    max-width: 35% !important;
+}
 
 @media screen and (max-width: 400px) {
     #ms210 {
