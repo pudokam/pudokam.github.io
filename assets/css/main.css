@@ -2422,7 +2422,7 @@ a:active {
 .intro-text {
 	flex: 1 1 55%;
 	max-width: 650px;
-	color: #f0adad;
+	color: #f0adad; /* Should be #ccc */
 	line-height: 1.8;
 }
 
