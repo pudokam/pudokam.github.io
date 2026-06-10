@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<!--
+    IMAGE-VIEWER.HTML - Full-size image viewer for research cards
+    Shows a full-resolution image passed via query string (img=...) and optional title.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <title>Image Viewer</title>
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <!-- app or web page icon -->
+        <link rel="icon" type="image/png" href="assets/images/maria icon 16px.png" />
+        <link rel="apple-touch-icon" href="assets/images/maria icon 16px.png" />
+
+        <style>
+            /* Simple viewer-specific styles */
+            .viewer-wrap { max-width:1200px; margin: 2.5rem auto; padding: 1rem; text-align:center; }
+            .viewer-img { max-width: 100%; height: auto; display: block; margin: 0.5rem auto; border-radius: 6px; }
+            .viewer-title { font-size: 1.25rem; margin-top: 0.5rem; color: #222; }
+            .viewer-back { display:inline-block; margin-bottom: 0.75rem; }
+        </style>
+    </head>
+    <body class="is-preload">
+        <div id="wrapper">
+            <header id="header">
+                <nav id="nav-top">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About Me</a>
+                    <a href="research.html" class="nav-link">Research</a>
+                    <a href="resume.html" class="nav-link">Resume</a>
+                    <a href="publications.html" class="nav-link">Publications</a>
+                    <a href="outreach.html" class="nav-link">Outreach</a>
+                </nav>
+            </header>
+
+            <div id="main">
+                <article class="panel">
+                    <header>
+                        <h2 id="page-heading">Image Viewer</h2>
+                    </header>
+                    <div class="viewer-wrap">
+                        <a class="viewer-back" href="research.html">← Back to Research</a>
+                        <div id="viewer">
+                            <p id="no-image-msg" style="color:#666;">Loading image…</p>
+                            <img id="viewer-img" class="viewer-img" src="" alt="" style="display:none;" />
+                            <div id="viewer-meta">
+                                <p class="viewer-title" id="viewer-title"></p>
+                                <p id="viewer-desc" style="color:#666;"></p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div id="footer">
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/maria-pudoka" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://orcid.org/0000-0003-4924-5941" target="_blank" rel="noopener">ORCID</a>
+                    <a href="https://github.com/pudokam" target="_blank" rel="noopener">GitHub</a>
+                    <a href="mailto:pudokam17@gmail.com">Email</a>
+                </div>
+                <div class="footer-contact">
+                    <p>Email: <a href="mailto:pudokam17@gmail.com">pudokam17@gmail.com</a></p>
+                    <p>933 N Cherry Ave, Tucson, AZ 85719</p>
+                </div>
+            </div>
+
+            <!-- JS (template first, then custom) -->
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+            <script src="assets/js/custom.js"></script>
+
+            <script>
+                // Parse query parameters and display image
+                (function(){
+                    function qs(key) {
+                        var params = new URLSearchParams(window.location.search);
+                        return params.get(key);
+                    }
+
+                    var img = qs('img');
+                    var title = qs('title');
+                    var desc = qs('desc');
+
+                    var imgEl = document.getElementById('viewer-img');
+                    var titleEl = document.getElementById('viewer-title');
+                    var descEl = document.getElementById('viewer-desc');
+                    var noMsg = document.getElementById('no-image-msg');
+
+                    if (!img) {
+                        noMsg.textContent = 'No image specified.';
+                        return;
+                    }
+
+                    // Basic safety: only allow relative paths (prevent full external URLs)
+                    try {
+                        var u = new URL(img, window.location.href);
+                        // Ensure same-origin or relative path under site
+                        if (u.origin !== window.location.origin) {
+                            noMsg.textContent = 'External images are not supported.';
+                            return;
+                        }
+                    } catch(e) {
+                        // malformed URL
+                    }
+
+                    imgEl.src = img;
+                    imgEl.alt = title || 'Research image';
+                    imgEl.onload = function(){
+                        noMsg.style.display = 'none';
+                        imgEl.style.display = 'block';
+                    };
+                    imgEl.onerror = function(){
+                        noMsg.textContent = 'Failed to load image.';
+                    };
+
+                    if (title) titleEl.textContent = decodeURIComponent(title);
+                    if (desc) descEl.textContent = decodeURIComponent(desc);
+                })();
+            </script>
+
+        </div>
+    </body>
+</html>
