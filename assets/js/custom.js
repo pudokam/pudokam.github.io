@@ -22,5 +22,21 @@
 		}
 	});
 	
+	// Add a mobile nav toggle button if the header nav exists.
+	const navTop = document.getElementById('nav-top');
+	if (navTop) {
+		const toggleButton = document.createElement('button');
+		toggleButton.id = 'nav-toggle';
+		toggleButton.type = 'button';
+		toggleButton.setAttribute('aria-label', 'Toggle navigation');
+		toggleButton.setAttribute('aria-expanded', 'false');
+		toggleButton.innerHTML = '<span class="nav-toggle-icon"></span><span class="nav-toggle-text">Menu</span>';
+		navTop.parentNode.insertBefore(toggleButton, navTop);
+	
+		toggleButton.addEventListener('click', () => {
+			const isOpen = navTop.classList.toggle('open');
+			toggleButton.setAttribute('aria-expanded', String(isOpen));
+		});
+	}
 })();
 
